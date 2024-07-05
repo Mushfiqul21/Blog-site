@@ -21,10 +21,15 @@
                 <div class="col-6 col-md-9 col-lg-8">
                     <div class="card">
                         <div class="card-body">
-                            <div class="">
-                                <h3>
+                            <div>
+                                <h1>
                                     {{ $blogData->title }}
-                                </h3>
+                                </h1>
+                            </div>
+                            <div>
+                                <h5>
+                                    Category: {{ $blogData->category->name }}
+                                </h5>
                             </div>
                             <div class="carousel-inner mt-4">
                                 <div class="carousel-item active">

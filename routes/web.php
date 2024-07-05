@@ -20,7 +20,7 @@ Route::redirect('/', '/dashboard-general-dashboard');
 
 // Dashboard
 Route::get('/dashboard-general-dashboard', function () {
-    return view('pages.dashboard-general-dashboard', ['type_menu' => 'dashboard']);
+    return view('blog.dashboard-general-dashboard', ['type_menu' => 'dashboard']);
 });
 
 

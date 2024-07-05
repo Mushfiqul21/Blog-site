@@ -10,12 +10,12 @@ class CategoryController extends Controller
     public function index() // all data show list
     {
         $categoryData = Category::all();
-        return view('pages.category-list', ['categoryData' => $categoryData]);
+        return view('blog.category-list', ['categoryData' => $categoryData]);
     }
 
     public function create() //data entry form 
     {
-        return view('pages.add-category');
+        return view('blog.add-category');
     }
     public function store(Request $request)
     {

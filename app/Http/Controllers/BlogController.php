@@ -13,13 +13,13 @@ class BlogController extends Controller
     public function index() // all data show list
     {
         $blogData = blog::with(['category'])->get();
-        return view('pages.blog-list', ['blogData' => $blogData]);
+        return view('blog.blog-list', ['blogData' => $blogData]);
     }
 
     public function create() //data entry form 
     {
         $category = Category::all();
-        return view('pages.add-blog', ['categories' => $category]);
+        return view('blog.add-blog', ['categories' => $category]);
     }
 
     public function store(Request $request)
@@ -63,14 +63,14 @@ class BlogController extends Controller
     public function show($id) //single data show
     {
         $blogData = blog::with(['blogImage'])->find($id);
-        return view('pages.blog-view', ['blogData' => $blogData]);
+        return view('blog.blog-view', ['blogData' => $blogData]);
     }
 
     public function edit($id) //data editing form
     {
         $blogData = blog::find($id);
 
-        return view('pages.blog-edit', ['blogData' => $blogData]);
+        return view('blog.blog-edit', ['blogData' => $blogData]);
     }
 
     public function update(Request $request, $id) //data update
