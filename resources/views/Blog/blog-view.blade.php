@@ -9,13 +9,10 @@
 @section('main')
     <div class="main-content">
         <section class="section">
-            <div class="section-header">
+            <div class="section-header d-flex justify-content-between">
                 <h1>Blog View</h1>
-                {{-- <div class="section-header-breadcrumb">
-                    <div class="breadcrumb-item active"><a href="#">Blogs</a></div>
-                    <div class="breadcrumb-item"><a href="#">Blog List</a></div>
-                    <div class="breadcrumb-item">View</div>
-                </div> --}}
+                <a href="{{ route('blog.list') }}"
+                   class="btn btn-primary">Back</a>
             </div>
             <div class="row">
                 <div class="col-6 col-md-9 col-lg-8">

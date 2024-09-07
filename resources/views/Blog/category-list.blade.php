@@ -47,17 +47,18 @@
                                             height="50px"></td>
 
                                         <td>
-                                         <a href="{{ route('category.edit', $data->id) }}" class="btn btn-success btn-action mr-1"
-                                            data-toggle="tooltip">Edit</a>
-                                         <form method="POST" action="{{ route('category.destroy', $data->id) }}">
-                                            @csrf
-                                            @method('delete')
-                                           
-                                                <button type="submit" class="btn btn-danger btn-sm btn-action"
-                                                data-toggle="tooltip">Delete</button>
-                                           
-                                        </form>
-                                         {{-- <a href="{{ route('blog.destroy', $data->id) }}" class="btn btn-danger">Delete</a> --}}
+                                            <div class="d-flex gap-1">
+                                                <a href="{{ route('category.edit', $data->id) }}" class="btn btn-success btn-action mr-1"
+                                                   data-toggle="tooltip">Edit</a>
+                                                <form method="POST" action="{{ route('category.destroy', $data->id) }}">
+                                                    @csrf
+                                                    @method('delete')
+
+                                                    <button type="submit" class="btn btn-danger btn-sm btn-action"
+                                                            data-toggle="tooltip">Delete</button>
+
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

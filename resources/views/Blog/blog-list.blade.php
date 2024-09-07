@@ -18,8 +18,8 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-header-action">
-                            <a href="#"
-                                class="btn btn-primary">View All</a>
+                            <a href="{{ route('blog.create') }}"
+                                class="btn btn-primary">Add New Blog</a>
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -49,19 +49,21 @@
                                         <td><img src="{{ asset($data->thumbnail) }}" width="50px"
                                             height="50px"></td>
 
-                                        <td><a href="{{ route('blog.show', $data->id) }}" class="btn btn-info btn-action mr-1"
-                                            data-toggle="tooltip">View</a>
-                                         <a href="{{ route('blog.edit', $data->id) }}" class="btn btn-success btn-action mr-1"
-                                            data-toggle="tooltip">Edit</a>
-                                         <form method="POST" action="{{ route('blog.destroy', $data->id) }}">
-                                            @csrf
-                                            @method('delete')
-                                           
-                                                <button type="submit" class="btn btn-danger btn-sm btn-action"
-                                                data-toggle="tooltip">Delete</button>
-                                           
-                                        </form>
-                                         {{-- <a href="{{ route('blog.destroy', $data->id) }}" class="btn btn-danger">Delete</a> --}}
+                                        <td>
+                                            <div class="d-flex gap-1">
+                                                <a href="{{ route('blog.show', $data->id) }}" class="btn btn-info btn-action mr-1"
+                                                   data-toggle="tooltip">View</a>
+                                                <a href="{{ route('blog.edit', $data->id) }}" class="btn btn-success btn-action mr-1"
+                                                   data-toggle="tooltip">Edit</a>
+                                                <form method="POST" action="{{ route('blog.destroy', $data->id) }}">
+                                                    @csrf
+                                                    @method('delete')
+
+                                                    <button type="submit" class="btn btn-danger btn-sm btn-action"
+                                                            data-toggle="tooltip">Delete</button>
+
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
