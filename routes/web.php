@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -16,31 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/dashboard-general-dashboard');
 
 // Dashboard
-Route::get('/dashboard-general-dashboard', function () {
-    return view('blog.dashboard-general-dashboard', ['type_menu' => 'dashboard']);
-});
 
+Route::get('/dashboard-general-dashboard', [DashboardController::class, 'dashboardGeneral'])->name('dashboard');
 
-// Route::get('/add-blog', [BlogController::class, 'create'])->name("blog.add");
-// Route::get('/blog-list/{id}', [BlogController::class, 'show'])->name("blog.list");
-// Route::post('/blog-list', [BlogController::class, 'store'])->name("blog.store");
-
-
-
-
+//Blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blog.list');
-
 Route::get('/blog/add', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/blog/add', [BlogController::class, 'store'])->name('blog.store');
-
 Route::get('/blog/{id}/show', [BlogController::class, 'show'])->name('blog.show');
-
 Route::get('/blog/{id}', [BlogController::class, 'edit'])->name('blog.edit');
 Route::post('/blog/{id}', [BlogController::class, 'update'])->name('blog.update');
-
 Route::delete('/blog/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 //Category Route

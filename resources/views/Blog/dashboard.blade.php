@@ -24,10 +24,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Admin</h4>
+                                <h4>Admin</h4>
                             </div>
                             <div class="card-body">
-                                1
+                                    1
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                                 <h4>Blogs</h4>
                             </div>
                             <div class="card-body">
-                                42
+                                {{$blogs}}
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                 <h4>Categories</h4>
                             </div>
                             <div class="card-body">
-                                1,201
+                                {{$categories}}
                             </div>
                         </div>
                     </div>
