@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 // Dashboard
 
-Route::get('/dashboard-general-dashboard', [DashboardController::class, 'dashboardGeneral'])->name('dashboard');
+Route::get('/', [DashboardController::class, 'dashboardGeneral'])->name('dashboard');
 
 //Blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blog.list');

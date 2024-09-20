@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <ul class="sidebar-menu">
-            <a href="{{ url('dashboard-general-dashboard') }}" class="nav-link has-dropdown"><i class="fas fa-fire"></i>
+            <a href="{{ url('/') }}" class="nav-link has-dropdown"><i class="fas fa-fire"></i>
                 <span>Dashboard</span></a>
             </li>
             <li class="nav-item dropdown">
